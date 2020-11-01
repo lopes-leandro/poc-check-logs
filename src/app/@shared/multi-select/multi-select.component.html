@@ -1,0 +1,12 @@
+<p-multiSelect
+    [options]="criticality"
+    [(ngModel)]="selectedCriticality"
+    [displaySelectedLabel]="true"
+    [showHeader]="false"
+    [showToggleAll]="false"
+    [maxSelectedLabels]="3"
+    optionLabel="name"
+    [selectedItemsLabel]="'{0} items selecionados'"
+    placeholder="{{ placeholder }}"
+    (onChange)="handleSelectCriticality($event)"
+  ></p-multiSelect>

@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "ng:start": "ng serve",
+    "server": "npx json-server --port 3001 dva-api.json",
+    "start": "concurrently \"npm run server\" \" npm run ng:start\"",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -12,6 +14,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.1.12",
+    "@angular/cdk": "^10.2.6",
     "@angular/common": "~9.1.12",
     "@angular/compiler": "~9.1.12",
     "@angular/core": "~9.1.12",
@@ -19,6 +22,11 @@
     "@angular/platform-browser": "~9.1.12",
     "@angular/platform-browser-dynamic": "~9.1.12",
     "@angular/router": "~9.1.12",
+    "concurrently": "^5.3.0",
+    "json-server": "^0.16.2",
+    "primeflex": "^2.0.0",
+    "primeicons": "^4.0.0",
+    "primeng": "^10.0.3",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

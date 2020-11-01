@@ -1,0 +1,36 @@
+<div style="display: flex; flex-direction: column; padding: 1rem">
+  <div
+    style="
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: start;
+      margin-bottom: 1.5rem;
+    "
+  >
+    <dva-auto-complete
+      [data]="autocompleteRules"
+      (outAddRulesFilter)="handleAddRulesFilter($event)"
+      (outRemoveRulesFilter)="handleRemoveRulesFilter($event)"
+    ></dva-auto-complete>
+    <dva-multi-select
+      style="margin-right: auto"
+      [criticality]="criticalityLevels"
+      [placeholder]="'Selecionar criticidade'"
+      (outSelectedCriticality)="handleSelectedCriticality($event)"
+    ></dva-multi-select>
+    <dva-select-button
+      (outChangeView)="handerChangeView($event)"
+    ></dva-select-button>
+  </div>
+  <dva-carroussel
+    [products]="rulesData"
+    *ngIf="isToggleViewControls"
+  ></dva-carroussel>
+  <dva-table
+    [data]="rulesData"
+    [cols]="cols"
+    [tablePaginator]="paginatorTable"
+    *ngIf="!isToggleViewControls"
+  ></dva-table>
+</div>

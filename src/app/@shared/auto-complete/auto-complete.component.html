@@ -1,0 +1,13 @@
+<p-autoComplete
+  [(ngModel)]="selectedRules"
+  [suggestions]="filteredRules"
+  [multiple]="true"
+  (completeMethod)="filterRules($event)"
+  (onSelect)="handleSelectRule($event)"
+  (onUnselect)="handleUnselectRule($event)"
+  field="name"
+  placeholder="Filtrar por regra"
+  minLength="2"
+  emptyMessage="Nenhuma correspondência encontrada"
+>
+</p-autoComplete>

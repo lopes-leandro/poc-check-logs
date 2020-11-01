@@ -1,0 +1,17 @@
+.view-carousel::before{
+  display: block;
+  content: ' ';
+  background-image: url('/assets/view-carousel.svg');
+  background-size: 28px 28px;
+  height: 28px;
+  width: 28px;
+}
+
+.view-list::before{
+  display: block;
+  content: ' ';
+  background-image: url('/assets/view-list.svg');
+  background-size: 28px 28px;
+  height: 28px;
+  width: 28px;
+}

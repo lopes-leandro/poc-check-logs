@@ -1,0 +1,57 @@
+::ng-deep {
+  .p-paginator {
+    .p-paginator-current {
+      margin-left: auto;
+    }
+  }
+  .p-datatable-responsive .p-datatable-tbody > tr > td .p-column-title {
+    display: none;
+  }
+
+  .p-datatable .p-datatable-thead > tr > th {
+    background-color: #f5f5f5;
+  }
+
+  .p-datatable .p-datatable-header {
+    padding: 0.5rem 0.5rem;
+    background-color: #f5f5f5;
+  }
+  .p-datatable .p-inputtext {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 40rem) {
+  ::ng-deep {
+    .p-datatable {
+      &.p-datatable-responsive {
+        .p-datatable-thead > tr > th,
+        .p-datatable-tfoot > tr > td {
+          display: none !important;
+        }
+
+        .p-datatable-tbody > tr > td {
+          text-align: left;
+          display: block;
+          width: 100%;
+          float: left;
+          clear: left;
+          border: 0 none;
+
+          .p-column-title {
+            padding: 0.4rem;
+            min-width: 30%;
+            display: inline-block;
+            margin: -0.4em 1em -0.4em -0.4rem;
+            font-weight: bold;
+          }
+
+          &:last-child {
+            border-bottom: 1px solid var(--surface-d);
+          }
+        }
+      }
+    }
+  }
+}

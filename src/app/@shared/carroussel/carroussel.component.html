@@ -1,0 +1,30 @@
+<p-carousel
+  [value]="products"
+  [numVisible]="3"
+  [numScroll]="3"
+  [circular]="false"
+  [responsiveOptions]="responsiveOptions"
+>
+  <ng-template let-product pTemplate="item">
+    <div class="product-item">
+      <div class="product-item-content">
+        <div>
+          <h4 class="">Regra: {{ product.name }}</h4>
+          <h4 class="">Criticidade: {{ product.criticalityLevel }}</h4>
+          <h4 class="">Total: {{ product.total }}</h4>
+          <div class="p-d-flex p-jc-around" >
+            <span>Inválidos: <span class="p-badge p-badge-success">{{ product.totalValid }}</span></span>
+            <span>Válidos: <span class="p-badge p-badge-danger">{{ product.totalInvalid }}</span></span>
+          </div>
+          <div class="car-buttons">
+            <p-button
+              type="button"
+              styleClass="p-button p-button-rounded p-mr-2"
+              icon="pi pi-search"
+            ></p-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>

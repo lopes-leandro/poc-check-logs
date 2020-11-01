@@ -1,0 +1,10 @@
+http://localhost:3001/rules?_expand=criticalityLevel
+
+###
+http://localhost:3001/criticalityLevels?_embed=rules
+
+###
+http://localhost:3001/rules?_expand=criticalityLevel
+
+###
+http://localhost:3001/rules?name=IOF Adicional&name=E-mail&criticalityLevelId=1&criticalityLevelId=2

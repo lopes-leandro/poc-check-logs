@@ -1,0 +1,5 @@
+<p-selectButton [options]="viewOptions" [(ngModel)]="typeView" (onOptionClick)="handleOptionClick($event)">
+  <ng-template let-item>
+      <i [class]="item.icon"></i>
+  </ng-template>
+</p-selectButton>
